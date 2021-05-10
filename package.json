@@ -1,9 +1,9 @@
 {
     "name": "vscode-cpp-xmlcmt",
-    "publisher": "Poeta Kodu",
-    "displayName": "vscode-cpp-xmlcmt",
-    "description": "Support for XML comments for C++ language in VS Code",
-    "version": "0.0.1",
+    "publisher": "PoetaKodu",
+    "displayName": "C++ XML Comments",
+    "description": "Basic support for XML comments for C++ language in VS Code",
+    "version": "0.1.0",
     "engines": {
         "vscode": "^1.39.0"
     },
@@ -16,5 +16,9 @@
             "scopeName": "xml-tag.injection",
             "injectTo": [ "source.cpp" ]
         }]
-    }
+    },
+    "repository": {
+        "url": "https://github.com/PoetaKodu/vscode-cpp-xmlcmt"
+    },
+    "icon": "res/img/logo.png"
 }

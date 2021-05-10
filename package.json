@@ -1,5 +1,6 @@
 {
     "name": "vscode-cpp-xmlcmt",
+    "publisher": "Poeta Kodu",
     "displayName": "vscode-cpp-xmlcmt",
     "description": "Support for XML comments for C++ language in VS Code",
     "version": "0.0.1",

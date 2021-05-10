@@ -1,65 +1,59 @@
-# vscode-cpp-xmlcmt README
+# XML Comments for C++
 
-This is the README for your extension "vscode-cpp-xmlcmt". After writing up a brief description, we recommend including the following sections.
+This adds basic XML highlighting for C++ documentation comments, for example:
 
+![Hightlighting](res/img/highlighting.png)
 ## Features
 
-Describe specific features of your extension including screenshots of your extension in action. Image paths are relative to this README file.
+- [x] highlighting of tags:
+  - **`<c>` for a code**
+  - `<code>` for a multiline code
+  - `<example>` for examples
+  - **`<exception>` for exception specification**
+  - `<include>` (no purpose for now)
+  - `<list>` for creating lists
+  - `<para>` for paragraphs
+  - **`<param>` for describing function parameters**
+  - `<paramref>` for referencing parameters
+  - `<permission>` for describing who can access an element
+  - **`<remarks>` for additional information about an element**
+  - **`<returns>` for describing the return value**
+  - `<see>` for linking to an element
+  - `<seealso>` for linking to an element inside "See also" documentation section
+  - **`<summary>` for primary information about an element**
+  - `<value>` for describing a property
+- [x] highlighting of arguments
+- [x] highlighting of argument values
 
-For example if there is an image subfolder under your extension project workspace:
+\* - highlighted most commonly used tags.
 
-\!\[feature X\]\(images/feature-x.png\)
+<hr/>
 
-> Tip: Many popular extensions utilize animations. This is an excellent way to show off your extension! We recommend short, focused animations that are easy to follow.
+**Note:** this is very simple extension right now. I've decided to publish it because I haven't found anything like that for VS Code, so having poor support is better than nothing.
+<hr/>
+
+## Missing features
+
+- [ ] no hover support, right now, VS Code presents hover like this:
+![Bad Hover Support](res/img/hover-bad.png)
+
+- [ ] snippets
+- [ ] maybe better colors?
 
 ## Requirements
 
-If you have any requirements or dependencies, add a section describing those and how to install and configure them.
-
-## Extension Settings
-
-Include if your extension adds any VS Code settings through the `contributes.configuration` extension point.
-
-For example:
-
-This extension contributes the following settings:
-
-* `myExtension.enable`: enable/disable this extension
-* `myExtension.thing`: set to `blah` to do something
-
-## Known Issues
-
-Calling out known issues can help limit users opening duplicate issues against your extension.
+VS Code C++ Extension
 
 ## Release Notes
 
 Users appreciate release notes as you update your extension.
 
-### 1.0.0
+### 0.1.0
 
-Initial release of ...
+Initial release of XML Comments for C++
 
-### 1.0.1
+**Please consider helping me with this extension by contributing.**
 
-Fixed issue #.
+## Authors
 
-### 1.1.0
-
-Added features X, Y, and Z.
-
------------------------------------------------------------------------------------------------------------
-
-## Working with Markdown
-
-**Note:** You can author your README using Visual Studio Code.  Here are some useful editor keyboard shortcuts:
-
-* Split the editor (`Cmd+\` on macOS or `Ctrl+\` on Windows and Linux)
-* Toggle preview (`Shift+CMD+V` on macOS or `Shift+Ctrl+V` on Windows and Linux)
-* Press `Ctrl+Space` (Windows, Linux) or `Cmd+Space` (macOS) to see a list of Markdown snippets
-
-### For more information
-
-* [Visual Studio Code's Markdown Support](http://code.visualstudio.com/docs/languages/markdown)
-* [Markdown Syntax Reference](https://help.github.com/articles/markdown-basics/)
-
-**Enjoy!**
+Made by Paweł Syska

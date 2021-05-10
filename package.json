@@ -1,0 +1,19 @@
+{
+    "name": "vscode-cpp-xmlcmt",
+    "displayName": "vscode-cpp-xmlcmt",
+    "description": "Support for XML comments for C++ language in VS Code",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.39.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "grammars": [{
+            "path": "./syntaxes/injection.json",
+            "scopeName": "xml-tag.injection",
+            "injectTo": [ "source.cpp" ]
+        }]
+    }
+}

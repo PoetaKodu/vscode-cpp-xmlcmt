@@ -1,0 +1,62 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"injectionSelector": "L:comment.line.double-slash.documentation",
+	"scopeName": "xml-tag.injection",
+	"patterns": [
+		{
+			"include": "#xml-tag"
+		}
+	],
+	"repository": {
+		"xml-tag": {
+			"begin": "\\</?(c|code|example|exception|include|list|para|param|paramref|permission|remarks|returns|see|seealso|summary|value)",
+			"end": "\\s*\\>",
+			"patterns": [
+				{
+					"include": "#xml-attribute-with-val"
+				},
+				{
+					"include": "#xml-attribute"
+				}
+			],
+			"name": "entity.name.tag"
+		},
+		"xml-attribute": {
+			"match": "\\s+(\\w+)",
+			"captures": {
+				"1": {
+					"name": "entity.other.attribute-name"
+				}
+			}
+		},
+		"xml-attribute-with-val": {
+			"begin": "\\s+(\\w+)\\s*(=)\\s*(\")",
+			"end": "\"",
+			"patterns": [
+				{
+					"include": "#xml-string-content"
+				}
+			],
+			"beginCaptures": {
+				"1": {
+					"name": "entity.other.attribute-name"
+				},
+				"2": {
+					"name": "punctuation.separator.key-value"
+				},
+				"3": {
+					"name": "punctuation.definition.string.begin"
+				}
+			},
+			"endCaptures": {
+				"0": {
+					"name": "punctuation.definition.string.end"
+				}
+			}
+		},
+		"xml-string-content": {
+			"match": "[^\"]|(\\\\\")",
+			"name": "string.quoted.doubledsad"
+		}
+	}
+}
